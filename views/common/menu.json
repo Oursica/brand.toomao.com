@@ -1,0 +1,37 @@
+[
+  {
+    "icon": "icon-list",
+    "name": "土冒资讯",
+    "sub": [
+      {
+        "link": "/brand/v/news/information",
+        "name": "资讯管理"
+      }
+    ]
+  },
+  {
+    "icon": "icon-activity",
+    "name": "商家故事",
+    "sub": [
+      {
+        "link": "/brand/v/story/shop",
+        "name": "走访故事"
+      }
+    ]
+  },
+  {
+    "icon" : "icon-lock",
+    "name" : "权限管理",
+    "sub": [
+      {
+        "link" : "/brand/v/user/info",
+        "name" : "账号管理"
+      },
+      {
+        "link" : "/logout",
+        "name" : "注销"
+      }
+    ]
+  }
+
+]

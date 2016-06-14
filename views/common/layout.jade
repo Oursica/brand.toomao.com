@@ -1,0 +1,44 @@
+doctype html
+html
+  head
+    link(rel='stylesheet' href='/_lib/bootstrap.min.css')
+    link(rel='stylesheet' href='/css/common.css')
+
+    link(rel="stylesheet", href="//common.toomao.com/css?p=citySelect,formJSON,formValidator,formOnInvalid,imageView,paging,tabs,template,toast,ajaxUpload,ajaxUpload-single,ui-switch,_base")
+    link(rel='stylesheet' href='//at.alicdn.com/t/font_1463991753_3097818.css')
+
+    link(rel='stylesheet' href='/_lib/dragula.min.css')
+
+    script.
+      window.baseApi = '#{baseApi}';
+      window.rootApi = '#{rootApi}';
+
+      window.Toomao = window.Toomao || {};
+      Toomao.config = Toomao.config || {};
+      Toomao.config = {
+        BASEAPI: '#{baseApi}',
+        ROOTAPI: '#{rootApi}',
+      }
+    block head
+      title layout-no-title
+  body
+    link(rel="import-webcom", href="//#{DEBUG ? 'dev-' : ''}common.toomao.com/webcom?q=brand:brand-menu,brand:brand-header")
+
+    // nav menu
+    nav(data-is='brand-menu' data-bind='#{JSON.stringify(menu)}')
+    header(data-is='brand-header' data-bind='{}')
+    .content-warpper
+      block content
+
+    script(src='/_lib/dragula.min.js')
+    script(src='/_lib/jquery.min.js')
+    script(src='/_lib/bootstrap.min.js')
+
+    script(src='/js/common.js')
+
+    script(src="//#{DEBUG ? 'dev-' : ''}common.toomao.com/js?p=citySelect,formJSON,formValidator,formOnInvalid,imageView,paging,tabs,template,toast,ajaxUpload,ajaxUpload-single,webcom&e=_fixMobile/EventPath.js,baseUtils/logForBrowser.js,baseUtils/dateFormater.js,_fixDesktop/XMLHttpRequest.js")
+
+    script(src='/_lib/rome/index.js')
+    //- script(src='//local.toomao.com:2999/js?p=citySelect,datetime,formJSON,formValidator,formOnInvalid,imageView,paging,tabs,template,toast,ajabrandxUpload,ajaxUpload-single,webcom&e=_fixMobile/EventPath.js,baseUtils/logForBrowser.js,baseUtils/dateFormater.js,_fixDesktop/XMLHttpRequest.js')
+
+    block foot

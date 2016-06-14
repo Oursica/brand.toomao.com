@@ -1,0 +1,31 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    link(rel='stylesheet' href='//at.alicdn.com/t/font_1442043996_412749.css')
+    link(rel='stylesheet' href='/css/login.css')
+    title 登录
+  body
+    .login-modal
+      form.login(action='/login' method='post' data-role='formJSON')
+        .title
+          span 土冒品牌部管理系统界面
+        .form-group
+          i.iconfont.icon-user
+          input.form-control(type='cellphone' name='name' value='' maxlength='11' placeholder='请输入您的手机号')
+        .form-group
+          i.iconfont.icon-password
+          input.form-control(type='password' name='password' value='' placeholder='请输入您的密码' minlength='6')
+        input.form-control.btn.btn-primary(type='submit' value='登  录')
+
+    //- script(src='')
+    script(src="//#{DEBUG ? 'dev-' : ''}common.toomao.com/js?p=formJSON&e=_fixMobile/EventPath.js,baseUtils/logForBrowser.js,_fixDesktop/XMLHttpRequest.js")
+    script.
+      document.querySelector('form.login').onended = function(d) {
+        if (d.code == 0) {
+          sessionStorage['menu'] = '/brand/v/index';
+          location.href = '/brand/v/index';
+        } else {
+          alert(d.msg);
+        }
+      }

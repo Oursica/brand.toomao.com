@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>土冒</title>
+    <style>
+      html,body {
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+      }
+      p {
+        margin: 0;
+        font-size: 0;
+      }
+      img {
+        max-width: 100%;
+        width: 100%;
+        -webkit-tap-highlight-color: transparent;
+      }
+      table {
+        width: 100%;
+      }
+      table img {
+        height: auto !important;
+        width: 100% !important;
+      }
+      table td {
+        font-size: 0;
+        outline: none;
+        border: none;
+        margin: 0;
+        padding: 0;
+      }
+      table {
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="holder"></div>
+    <form data-role='formJSON' method='GET'></form>
+    <div data-role="shareWX" data-api="//m.toomao.com/wechat/sdk/sign" data-title="土冒，我们只卖特产" data-desc="土冒商城" data-link="http://m.toomao.com/square" data-imgurl="http://m.toomao.com/favicon.png" class="shareWX"></div>
+    <script src='//common.toomao.com/js?p=template,formJSON,shareWX,lazyload&e=_mobile/Toomao.js,_mobile/common.js,_fixMobile/HTMLElement.js,_fixMobile/XMLHttpRequest.js,_fixMobile/CustomEvent.js,_fixMobile/EventPath.js,baseUtils/logForBrowser.js'></script>
+  	<img class='analytics' data-src='https://api.toomao.com/1.1/webstat/temphtml/' style='display:none;'/>
+    <script>
+      var form = document.querySelector('body > form')
+        , id   = ''
+        , shareWX = document.querySelector('body > [data-role="shareWX"]')
+        , defaultImg = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAr4AAAGQBAMAAAC6536dAAAAGFBMVEX39/fZ2dnz8/Pf39/o6Ojv7+/k5OTs7OxRIP+5AAAGe0lEQVR42uzBgQAAAACAoP2pF6kCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABmz356kwjCOI4/TsRefbKK18lKOXdZxGuBFa6IbDhvS/HaGopv35mEGlOdzY6DJ7+fhD/Zuf0yeZ6ZZwEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPDfuzxUVVVvKysiva+L5aMVz1rBGZhGnbLQWb5ZbtS5E++4EpxBT0+yya2W6nwUb/6UrxEkMHPtN1lRaJltfcrlZCWefVo/fhMk6N3Ohnfb7e5yaRb7/SxfP1subtx3LvhbuRgrYv2/3Mpzplq5kHePgrMyeb1ey8lQs5kgPsPc5r/UWmv8E5Ob7aFa7Mty8v1kqvpGEGHwScTX291iNah2dZ3Xle3tFnv3ZD45FPpTlrmP/+U8HME0WVUt1Bs3qqWj47m26Au6M4XGYP9Guig01o2gs/caiQYXZarRMgYSUeWBAhErvTyML+tGQ0aCtHw/nOZpgVUmaV19+XMHs62lebQRRMzUf5eVVuRFMN85HS4lX++6Ld/P14K049lVW76De0Favq9dvvS3f5rvq2C+go6G4XydY2j/MuLpqFe05WsC+Q65waXmey/Oy0B/e3gn6OSidcQwDeTbUIGT7m/ZTLxBqL81vONMeXtxJV74/DCacv5NyfetSPv84YF8U+7HfSteEd6/nB+S5g/9lTjh+WRBf/vB3tk0Nw0DYXhH2OTKRiZnk4T0iiw7ucZJml7zSa91W3IupYW/T1UCA9PIEVI8cHifmV7qnJ7ZWWtXKzmwv5Nf1fjN4TfUr6kvzDpifnj9gPWvA/HCXl5wm1rMI6I16gtfXl/X+H1L4pEMG3Wg/wu/DkTXJKrje5g9+PVDpNbpqIsV/SJ66bcHvyHtnfyenrGVccUXrB9867eSOxMyxHOlteLzhwrrsxP6Xefp84M529GcoMHut/6V+5yruNZvB34949dUxv051zJSiF/f+k2eb9d8hKyCX2e/HowU8oNzfvCgqODXjdjLb/a5gwG0BuM3W0psYDjmX+SHP/gv4jdXIwINvt9KzKc2mR+yAU5gNPp+66G+aNRvCb+Nrh/Qf2jUb476+ER+NfoPzfmVsxVReTA/4Ahy6PkLebuyHlAuFPoPgX7ztOaERqGwfxzmNyfDZqpTopcpJFujvgjLv+f7wZ2EiJYv4/c15lMdEOf2/u/+jqP2Yb8R/DoQ50frt7uDKaSI3hI4irg/5rdz+BRGMcAVPKHz1Y9x9WPIr8J86mn9mpCe/NibWxwMX85KxK9v/yxZiClnZOh9Ohy+nC1RX/j6NZ2FgRzTE63Ucj9PUfIVAS+/PCIilrcTol5KfUv/TGKDyHv+ISUyOYBi9WnKBxlVyA/+x7vHRIo7pn6z7w+hf+ZGxC9pG79XdcM92QD5wT9+ZUoqIcM76/wO/AbMn+URP+sTX+C3ofk+oy+u7PMPyL9hfvWEWmrcsjwtIuwfh86nTlRhvWEjW2N/M9RvKY1CZZkvgV8HRO38Ttv8oMT8jj/xom5/fkFRQu8w/+tPq6jxK+MpJ5YrKDWjv+NA3EltfiWPpooTWtqvVwXHENrqt80p9VViHY9AfRHmd8FEFEmLX4nzsS4IdWfxK2PejIm0xa9G/LogqoVFYBJzqfN0ao1ffkPAwa8lftvEJbO05ge835wo7ywC39DDWjNLvN+C6KdWv5cmvOE3PEVY/JZE9EpSiU88BSGUxe9yVrM+Y9wPE+43jnuSSnxBoJn8sFwxM/w25ncTydnmwuoX831BfhMiYTIs4rcZv3L/FH6b8bvfnz+D34bOdycTon7Hmh/QPwve39SaOUV90Zhfwxj1RaP3P1xRhfzboN8PpPAF5CBaXEdi8YvtY1cGXItmC2hPuhFxPXi9hfFRcR0I3zDOlJdfifB1o4f08Dv/iV+Jrxc60uc68Pnjf3J9H+7+9Vr/dmY/me92u9mNHioe6icU83C3u2HWCN+/RXw10uTwyeq96P5G+vR3Nuu+X3W7l98ezX8ut9vNjVb5I15uf4F4f/HtwfhzstbdbrsEghGw2CiD4eKXZUHg1PQ5M7n52ui9QL49OaLKiN7vjN/4lsB39uBAAAAAAADI/7URVFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVWV9uCABAAAAEDQ/9ftCFQAAAAAAAAAAAAAAAAAAAAAAICLAFISFpgNdDPRAAAAAElFTkSuQmCC';
+
+      // 初始化
+      try {
+        id = location.search.match(/id=([^&#]*)/)[1];
+      } catch (e) {
+        alert('编号错误')
+      }
+      form.action = (location.search.indexOf('mode=test') !== -1 ? '//dev-activity.toomao.com/temphtml/' : '//activity.toomao.com/temphtml/') + id;
+
+
+
+      form.onended = function(d) {
+
+        var analytics = document.querySelector('img.analytics');
+        analytics.src = analytics.dataset.src + id;
+
+        try {
+          if (d.length === 0) {
+            alert('编号错误')
+            return;
+          }
+          d = d[0];
+
+          var wrapper = document.createElement('div');
+          wrapper.innerHTML = d.html;
+
+          var imgs = wrapper.querySelectorAll('img');
+          for (var i = imgs.length - 1; i >= 0; i--) {
+            imgs[i].dataset.src = imgs[i].src;
+            imgs[i].src = defaultImg;
+            imgs[i].classList.add('lazy');
+          }
+
+          document.querySelector('body .holder').appendChild(wrapper);
+          var scripts = wrapper.querySelectorAll('script');
+          for (var i = 0; i < scripts.length; i++) {
+            eval(scripts[i].innerHTML);
+          }
+
+          document.title = d.title;
+          shareWX.setAttribute('data-title', d.sharetitle);
+          shareWX.setAttribute('data-desc', d.sharedesc);
+          shareWX.setAttribute('data-imgurl', d.shareimg);
+          shareWX.setAttribute('data-link', location.href);
+          document.dispatchEvent(new Event('shareWX-reload'));
+          document.dispatchEvent(new Event('lazyload-reload'));
+        } catch (e) {
+          console.error(d);
+        }
+      }
+      document.addEventListener('readystatechange', function() {
+        if (document.readyState === 'complete') {
+          form.submit();
+        }
+      })
+    </script>
+  </body>
+</html>

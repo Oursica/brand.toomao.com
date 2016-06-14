@@ -1,0 +1,83 @@
+extend ../common/layout.jade
+block head
+  title 用户信息
+  style.
+    .row{
+      margin-top: 1em;
+    }
+block content
+  .text-center.add-btns
+    button.btn.btn-primary(type='button', data-toggle='modal', data-target='#add-user') 添加用户
+
+  .container-fluid.row
+
+   //- 添加用户
+  #add-user.modal.fade(role='dialog', aria-hidden='true')
+    .modal-dialog
+      .modal-content
+        .modal-header
+          button.close(type='button', data-dismiss='modal', aria-label='Close')
+          h4.modal-title 添加用户
+        .modal-body
+          form.user(action='/user' data-role='formJSON')
+            .form-group
+              input.form-control(name='mobile', placeholder='手机号')
+            .form-group
+              input.form-control(name='nickname', placeholder='昵称')
+            .form-group
+              input.form-control(type='password', name='password', placeholder='密码')
+            .form-group
+              select.form-control(name='auth')
+                option(value='uploadShop') 仅店铺上传
+                option(value='admin') 管理员
+        .modal-footer
+          button.btn.btn-primary(data-dismiss='modal') 关闭
+          button.btn.btn-success(onclick='$("form.user").submit();') 添加
+block foot
+  script(type='text/html' id='tmpl' data-holder='body .row' data-role='template').
+    <%
+      obj.forEach(function(d){
+    %>
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+        <div class='panel panel-info'>
+          <div class='panel-heading'><%=d.nickname%></div>
+          <div class='panel-body'>
+            <ul>
+              <li>手机：<%=d.mobile%></li>
+            </ul>
+          </div>
+          <div class="panel-footer text-right">
+            <form action="/user/<%=d.id%>" class="delete" method="DELETE" data-target=".row" data-role='formJSON'>
+              <button class="btn btn-danger">删除</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    <%
+      });
+    %>
+  script.
+    $(function(){
+
+
+      var tmpl = $('#tmpl')[0];
+      // init
+      var init = function(){
+        $.getJSON('/user', function(d){
+          tmpl._updateBy(d);
+        });
+      }
+      init();
+
+      // post form & add a ad
+      $('form.user')[0].onended = function(d){
+        console.log(d)
+        $('#add-user').modal('hide')
+        init();
+      }
+
+      $('.row')[0].onended = function(d){
+        init();
+      }
+
+    });

@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <link rel='stylesheet' href='//at.alicdn.com/t/font_1452667675_22946.css'>
+    <link rel="import-webcom" href="//local.toomao.com:2999/webcoms/ueditor.html">
+    <style>
+      .webcom {
+        margin: 10px;
+        height: 300px;
+        width: 320px;
+        float: left;
+        overflow-y: auto;
+        overflow-x: visible;
+        box-shadow: 0 0 12px 1px rgba(0, 0, 0, 0.22);
+            position: relative;
+      }
+      .webcom:after {
+        content: attr(data-desc);
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.46);
+        color: #fff;
+        top: 0;
+        padding: 6px;
+        right: 0;
+        font-size: 12px;
+        z-index: 9999;
+      }
+      body > button {
+        margin: 20px;
+        padding: 10px;
+        background-color: #00A7FF;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="webcom" data-desc='ueditor'>
+      <div data-is='ueditor' data-bind='{}'>
+        <h1>h1标题</h1>
+        <p>p段落</p>
+      </div>
+    </div>
+
+    <button onclick="dynamic()">动态插入</button>
+
+    <script src='//local.toomao.com:2999/js?p=swiper,lazyload,template,formJSON,webcom&e=_lib/require.min.js&min=false'></script>
+    <script>
+      window.baseApi = 'https://dev-api.toomao.com';
+      require(['template', 'webcom'], function(){
+
+      })
+
+    </script>
+  </body>
+</html>

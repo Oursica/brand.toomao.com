@@ -1,0 +1,161 @@
+html, body {
+  height: 100%;
+  font-family: 'MicroSoft YaHei';
+  font-weight: 100;
+}
+body {
+  padding-left: 150px;
+  background-color: #F8F8F8;
+  overflow-y: hidden;
+}
+
+.content-warpper {
+  padding-top: 60px;
+  height: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #fff;
+  margin-left: 10px;
+}
+
+.page-title {
+  padding: 10px 10px 10px 0;
+  font-size: 16px;
+  border-bottom: solid 1px #E6E6E6;
+  border-radius: 0;
+  margin-bottom: 20px;
+}
+.panel-heading small {
+  margin-left: .5em;
+  opacity: .6;
+}
+.panel-body ul {
+  list-style: none;
+  padding: 0;
+}
+.panel-body .li-img {
+  height: 3em;
+}
+.panel-body .li-img img {
+  height: 3em;
+}
+
+/* form-left-right */
+
+form.form-lr .form-group {
+  position: relative;
+  padding-left: 6em;
+}
+form.form-lr .form-group label {
+  position: absolute;
+  left: 0;
+  top: .6em;
+}
+
+/* for dragula*/
+
+table .gu-mirror {
+  display: table;
+  box-shadow: 0 0 10px 1px #ccc;
+  cursor: -webkit-grabbing;
+}
+
+/* for table */
+
+table img {
+  height: 80px;
+  width: 80px;
+  cursor: pointer;
+}
+table.table-sortable tbody tr:hover {
+  background-color: rgba(16, 16, 16, 0.03) !important;
+  cursor: -webkit-grab;
+}
+table form {
+  display: inline-block;
+}
+table .imageView {
+  cursor: pointer;
+}
+
+/*override button under table*/
+
+.btn-primary {
+  color: #fff;
+  background-color: #A91700 !important;
+  border-color: #A91700 !important;
+}
+.input-group .input-group-addon button {
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+.table {
+  margin-top: 20px;
+}
+.table thead {
+  background-color: #F1F1F1;
+}
+.table>tbody>tr>td {
+  border: none;
+  border-bottom: solid 2px #f1f1f1;
+  padding: 15px;
+  vertical-align: middle;
+}
+.table>thead>tr>th {
+  border: none;
+  padding: 10px 15px;
+  color: #737373;
+  font-weight: 100;
+}
+table .btn {
+  border: none;
+  color: #000 !important;
+  padding: 0px 10px 0 0;
+  border-radius: 0;
+  background-color: transparent !important;
+}
+table .btn + .btn {
+  padding-left: 15px;
+  border-left: solid #ccc 1px;
+}
+table .btn-danger {
+  border: none;
+  color: #A91700 !important;
+  padding: 0px 10px 0 0;
+  border-radius: 0;
+  background-color: transparent !important;
+}
+label {
+  font-weight: 100;
+}
+.upload-group .upload-tip {
+  display: inline-block;
+  color: #333333;
+  vertical-align: bottom;
+  margin-left: 5px;
+}
+.upload-group .upload-img {
+  width: 100%;
+  margin-top: 10px;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  display: none;
+  border: solid 1px #F1ECEC;
+}
+
+/* upload button */
+
+.upload-group .upload-btn {
+  width: 6em;
+  background-color: #A91700;
+  padding: .4em;
+  color: #fff;
+  border-radius: .3em;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+}
