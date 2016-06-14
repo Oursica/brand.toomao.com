@@ -130,18 +130,7 @@ app.use('/brand'        , require('./routes/brand'));
 app.use('/user'         , require('./routes/user'));
 app.use('/userShop'     , require('./routes/userShop'));
 
-/*
- * 资讯平台
- *   资讯管理
- */
-app.use('/news/information'     , require('./routes/news/information'));
 
-
-/*
- * 商家故事
- *   走访故事
- */
-app.use('/story/shop'     , require('./routes/story/shop'));
 
 
 

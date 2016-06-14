@@ -16,6 +16,35 @@ unirest.get(api.rootApi + '/1.1/static/list')
   }
 })
 
+/*
+ * 资讯列表
+ */
+router.get('/v/news/information', function(req, res) {
+  res.render('news/information/list')
+})
+
+/*
+ * 资讯添加
+ */
+router.get('/v/news/information/add', function(req, res) {
+  res.render('news/information/add')
+})
+
+/*
+ * 故事列表
+ */
+router.get('/v/story/shop', function(req, res) {
+  res.render('story/shop/list')
+})
+
+/*
+ * 故事添加
+ */
+router.get('/v/story/shop/add', function(req, res) {
+  res.render('story/shop/add')
+})
+
+
 
 
 /*

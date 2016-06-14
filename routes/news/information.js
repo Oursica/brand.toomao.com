@@ -8,14 +8,14 @@ var unirest   = require('unirest');
  * 资讯列表
  */
 router.get('/', function(req, res) {
-  res.render('news/information/list')
+  res.render('/brand/v/news/information/list')
 })
 
 /*
  * 资讯添加
  */
 router.get('/add', function(req, res) {
-  res.render('news/information/add')
+  res.render('/brand/v/news/information/add')
 })
 
 /*
